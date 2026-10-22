@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up - Student Portal</title>
+    <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body>
+<main class="auth">
+    <a href="index.html" class="brand">Student Portal &amp; Portfolio</a>
+    <h1>Create your account</h1>
+    <p class="sub">Register to manage student records.</p>
+
+    <!-- Notices -->
+    <div class="msg error" id="signupError" style="display: none;"></div>
+    <div class="msg success" id="signupSuccess" style="display: none;"></div>
+
+    <form id="signupForm" data-auth-form>
+        <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Maria Santos"
+                   autocomplete="name" required autofocus>
+        </div>
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com"
+                   autocomplete="email" required>
+        </div>
+        <div class="field">
+            <label for="password">Password</label>
+            <div class="pw">
+                <input type="password" id="password" name="password" placeholder="Create a password"
+                       autocomplete="new-password" required minlength="8" maxlength="72">
+                <button type="button" class="pw-toggle" aria-label="Show password">Show</button>
+            </div>
+            <ul class="rules" id="pwRules">
+                <li data-rule="upper">Starts with an uppercase letter</li>
+                <li data-rule="length">At least 8 characters</li>
+                <li data-rule="lower">Has a lowercase letter</li>
+                <li data-rule="number">Has a number</li>
+                <li data-rule="special">Has a special character</li>
+                <li data-rule="space">No spaces</li>
+            </ul>
+        </div>
+        <button type="submit" class="submit">Create account</button>
+    </form>
+
+    <p class="link-text">Already have an account? <a href="login.html">Log in</a></p>
+    <p class="link-text" style="margin-top: 6px;"><a href="index.html">&larr; Back to Portfolio</a></p>
+</main>
+
+<div class="status-indicator" id="authStatus"></div>
+
+<script src="assets/js/db.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>
+

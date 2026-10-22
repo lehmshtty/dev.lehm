@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Portal - Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Additional polish for standalone view */
+        .toast-notify {
+            position: fixed;
+            top: 80px;
+            right: 24px;
+            background: rgba(20, 20, 24, 0.95);
+            border: 1px solid var(--accent);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff;
+            display: none;
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+        }
+        .toast-notify.show { display: block; }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="index.html" class="brand">Student Portal</a>
+    <ul>
+        <li><a href="index.html">Portfolio Home</a></li>
+        <li><a href="student-portal.html" class="active" style="color: var(--accent);">Students</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+    </ul>
+</nav>
+
+<a href="#" class="butt" data-logout-btn>Log out</a>
+
+<main class="page">
+    <h1 id="welcomeGreeting">Student Records</h1>
+    <p class="sub">Manage your student roster with real-time browser persistence.</p>
+
+    <!-- Add / Edit Form Panel -->
+    <section class="panel">
+        <h2 id="formTitle">Add a student</h2>
+        <form id="studentForm" class="student-form">
+            <input type="hidden" id="studentId" value="">
+            <input type="text" id="studentName" placeholder="Name" aria-label="Name" required>
+            <input type="text" id="studentCourse" placeholder="Course" aria-label="Course" required>
+            <button type="submit" id="formSubmitBtn">Add student</button>
+            <button type="button" id="formCancelBtn" class="cancel" style="display:none; background:none; border:none; cursor:pointer;">Cancel</button>
+        </form>
+    </section>
+
+    <!-- Search & Records Panel -->
+    <section class="panel">
+        <form id="searchForm" class="student-form search">
+            <input type="text" id="searchInput" placeholder="Search by name or course" aria-label="Search">
+            <button type="submit">Search</button>
+            <button type="button" id="resetSearchBtn" class="cancel" style="display:none; background:none; border:none; cursor:pointer;">Reset</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th style="text-align: right;">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+                <!-- Rendered dynamically by assets/js/student-portal.js -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Gallery Panel -->
+    <section class="panel" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="assets/img/1.jpg" alt="Student Life 1">
+            <img src="assets/img/2.jpg" alt="Student Life 2">
+            <img src="assets/img/3.jpg" alt="Student Life 3">
+            <img src="assets/img/4.jpg" alt="Student Life 4">
+        </div>
+    </section>
+</main>
+
+<!-- Status Toast -->
+<div class="portal-toast" id="portalToast"></div>
+
+<!-- Status indicator (bottom-left) -->
+<div class="status-indicator" id="authStatus"></div>
+
+<!-- Scripts -->
+<script src="assets/js/db.js"></script>
+<script src="assets/js/student-portal.js"></script>
+<script src="assets/js/auth.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const user = DB.getCurrentUser();
+        const greeting = document.getElementById("welcomeGreeting");
+        if (greeting && user) {
+            greeting.textContent = `Hello, ${user.name}`;
+        }
+    });
+</script>
+</body>
+</html>
+

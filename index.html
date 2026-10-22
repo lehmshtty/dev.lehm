@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehm | Developer Portfolio & Student Portal</title>
+    <!-- Core Glassmorphism Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Portfolio Enhancements -->
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+    <!-- Ambient background glows -->
+    <div class="ambient-glow ambient-1"></div>
+    <div class="ambient-glow ambient-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="port-nav">
+        <a href="#hero" class="brand-group">
+            <div class="logo-pill">L</div>
+            <div class="brand-title">LEHM<span>.DEV</span></div>
+        </a>
+
+        <ul class="port-nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#student-system" class="highlight">Student Portal (App)</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="port-nav-actions">
+            <a href="student-portal.html" class="btn-toolbar accent" title="Launch standalone full dashboard">
+                Standalone App &UpperRightArrow;
+            </a>
+            <a href="login.html" class="btn-nav-auth" id="navAuthBtn">Log in</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="ping-dot"></span>
+                    Student Management System Live &bull; Pure HTML, CSS &amp; JS
+                </div>
+                <h1 class="hero-title">
+                    Building Sleek, Modern <span class="gradient-text">Web Applications</span>
+                </h1>
+                <p class="hero-sub">
+                    Welcome to my portfolio! Here you can test my fully functional 
+                    <strong>Student Record Management System</strong> featuring real-time search, 
+                    dynamic CRUD operations, and sleek dark glassmorphic UI.
+                </p>
+                <div class="hero-cta">
+                    <a href="#student-system" class="btn-primary-glow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        Try Live Student App
+                    </a>
+                    <a href="#gallery" class="btn-secondary-glass">
+                        Explore Gallery
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="num">100<span>%</span></div>
+                        <div class="label">Pure HTML, CSS &amp; JS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="num">4<span>+</span></div>
+                        <div class="label">Active Student Records</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="num">Instant</div>
+                        <div class="label">Local Persistence</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Code / UI Preview Card -->
+            <div class="hero-card">
+                <div class="hero-card-header">
+                    <div class="terminal-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span style="font-size: 11px; color: var(--text-muted); font-family: monospace;">student-system.js</span>
+                </div>
+                <pre class="tech-snippet"><code><span class="comment">// Pure Client-Side CRUD Engine</span>
+<span class="kw">const</span> StudentApp = {
+  activeStudents: <span class="str">"Instant LocalStorage"</span>,
+  features: [
+    <span class="str">"Add &amp; Update Students"</span>,
+    <span class="str">"Real-Time Course Search"</span>,
+    <span class="str">"6-Rule Password Policy"</span>
+  ],
+  <span class="fn">init</span>() {
+    <span class="kw">return</span> <span class="str">"Ready for interaction!"</span>;
+  }
+};</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main>
+
+        <!-- About Me Section -->
+        <section class="section-wrapper" id="about">
+            <div class="section-header">
+                <span class="section-tag">Overview</span>
+                <h2 class="section-title">About My Work</h2>
+                <p class="section-desc">
+                    Specializing in responsive web architecture, modular code structure, and aesthetic 
+                    user experiences with clean black and neon-orange contrast design.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">&#9881;</div>
+                    <h3>Interactive Web Systems</h3>
+                    <p>Designed and built full record-keeping dashboards with data manipulation, inline validation, and fast UI feedback loops.</p>
+                    <div class="skill-tags">
+                        <span class="skill-pill">CRUD Architecture</span>
+                        <span class="skill-pill">Data Persistence</span>
+                        <span class="skill-pill">State Handling</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">&#10024;</div>
+                    <h3>Glassmorphic Design</h3>
+                    <p>High-end dark mode aesthetics with backdrop-filter blurs, neon ambient glows, and responsive grid layouts.</p>
+                    <div class="skill-tags">
+                        <span class="skill-pill">CSS Backdrop Blur</span>
+                        <span class="skill-pill">Modern Gradients</span>
+                        <span class="skill-pill">Fluid Typography</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">&#128274;</div>
+                    <h3>Secure Authentication</h3>
+                    <p>Client and server-side authentication models with real-time password rule compliance checks and session badges.</p>
+                    <div class="skill-tags">
+                        <span class="skill-pill">Regex Password Policy</span>
+                        <span class="skill-pill">Session Indicators</span>
+                        <span class="skill-pill">Form Validation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section-wrapper" id="skills">
+            <div class="section-header">
+                <span class="section-tag">Tech Stack</span>
+                <h2 class="section-title">Skills &amp; Technologies</h2>
+                <p class="section-desc">Languages, tools, and paradigms applied across this project.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Frontend Development</h3>
+                    <p>Crafting accessible, lightweight, and performant web interfaces.</p>
+                    <div class="skill-tags">
+                        <span class="skill-pill">HTML5 Semantic Elements</span>
+                        <span class="skill-pill">CSS3 &amp; Flexbox/Grid</span>
+                        <span class="skill-pill">Modern JavaScript (ES6+)</span>
+                        <span class="skill-pill">LocalStorage DB</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Backend &amp; Database Roots</h3>
+                    <p>Original architecture implemented in full-stack LAMP environment.</p>
+                    <div class="skill-tags">
+                        <span class="skill-pill">PHP 8+</span>
+                        <span class="skill-pill">MySQL / MariaDB</span>
+                        <span class="skill-pill">Prepared Statements</span>
+                        <span class="skill-pill">XAMPP Environment</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>UI &amp; Tooling</h3>
+                    <p>Workflow tools for rapid development and clean code quality.</p>
+                    <div class="skill-tags">
+                        <span class="skill-pill">Git &amp; Version Control</span>
+                        <span class="skill-pill">VS Code</span>
+                        <span class="skill-pill">Chrome DevTools</span>
+                        <span class="skill-pill">Responsive Testing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED INTERACTIVE APP: STUDENT PORTAL ("THE STUDENT SOMETHING") -->
+        <section class="section-wrapper" id="student-system">
+            <div class="section-header">
+                <span class="section-tag">Interactive Feature</span>
+                <h2 class="section-title">Student Record Management System</h2>
+                <p class="section-desc">
+                    Try the live student management system below. You can <strong>add</strong> new students, 
+                    <strong>edit</strong> details, <strong>delete</strong> records, and perform <strong>live searches</strong>. 
+                    All data is persisted in your browser's storage!
+                </p>
+            </div>
+
+            <!-- The App Container -->
+            <div class="app-container-card">
+                <!-- App Header Toolbar -->
+                <div class="app-toolbar">
+                    <div class="app-title-group">
+                        <span class="app-status-dot"></span>
+                        <span class="app-name">Student Portal Dashboard</span>
+                        <span class="app-badge" id="studentCount">Loading...</span>
+                    </div>
+
+                    <div class="app-actions">
+                        <button type="button" class="btn-toolbar" id="seedResetBtn" title="Reset sample records">
+                            &#8635; Restore Sample Data
+                        </button>
+                        <a href="student-portal.html" class="btn-toolbar accent" target="_blank" title="Open as full standalone page">
+                            Open Full Page &nearr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- App Body Area -->
+                <div class="app-body">
+                    
+                    <!-- Add / Edit Form Panel -->
+                    <div class="portal-card">
+                        <div class="portal-card-header">
+                            <h3 class="portal-card-title" id="formTitle">Add a Student</h3>
+                        </div>
+                        <form id="studentForm" class="student-form">
+                            <input type="hidden" id="studentId" value="">
+                            <input type="text" id="studentName" placeholder="Full Name (e.g. Maria Santos)" aria-label="Student Name" required>
+                            <input type="text" id="studentCourse" placeholder="Course (e.g. BS Computer Science)" aria-label="Student Course" required>
+                            <button type="submit" id="formSubmitBtn">Add Student</button>
+                            <button type="button" id="formCancelBtn" class="cancel" style="display:none; background:none; border:none; color:var(--muted); cursor:pointer;">Cancel</button>
+                        </form>
+                    </div>
+
+                    <!-- Search & Table Panel -->
+                    <div class="portal-card">
+                        <div class="portal-card-header">
+                            <h3 class="portal-card-title">Enrolled Students</h3>
+                        </div>
+
+                        <!-- Live Search Bar -->
+                        <form id="searchForm" class="student-form search" style="margin-bottom: 18px;">
+                            <input type="text" id="searchInput" placeholder="Search by name or course in real-time..." aria-label="Search students">
+                            <button type="submit">Search</button>
+                            <button type="button" id="resetSearchBtn" class="cancel" style="display: none; background:none; border:none; color:var(--muted); cursor:pointer;">Reset</button>
+                        </form>
+
+                        <!-- Student Data Table -->
+                        <div class="table-responsive">
+                            <table class="student-data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Student Name</th>
+                                        <th>Course</th>
+                                        <th style="text-align: right;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="studentTableBody">
+                                    <!-- Rendered dynamically by assets/js/student-portal.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section class="section-wrapper" id="projects">
+            <div class="section-header">
+                <span class="section-tag">Showcase</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-desc">Key modules and software components built for this portfolio.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-card-banner">
+                        <img src="assets/img/1.jpg" alt="Student Management System Banner">
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-tag">Full CRUD Application</div>
+                        <h3>Student Records Manager</h3>
+                        <p>Complete student registry with auto-increment IDs, instant real-time search, inline record editing, and persistent client-side data storage.</p>
+                        <div class="project-tech">
+                            <span>JavaScript ES6</span>
+                            <span>LocalStorage</span>
+                            <span>DOM Manipulation</span>
+                            <span>CSS Glassmorphism</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#student-system" class="project-link-btn">Test Interactive App</a>
+                            <a href="student-portal.html" class="project-link-btn">Standalone View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-card-banner">
+                        <img src="assets/img/2.jpg" alt="Authentication Engine Banner">
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-tag">Security &amp; UX</div>
+                        <h3>Interactive Auth &amp; Password Engine</h3>
+                        <p>Rigorous password verification system featuring 6 live criteria checks (uppercase, lowercase, number, special char, length, spaces) with password toggle visibility.</p>
+                        <div class="project-tech">
+                            <span>RegEx Rules</span>
+                            <span>Interactive Validation</span>
+                            <span>State Badge</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="signup.html" class="project-link-btn">Test Sign Up</a>
+                            <a href="login.html" class="project-link-btn">Test Login</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-card-banner">
+                        <img src="assets/img/3.jpg" alt="Glassmorphic Design Banner">
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-tag">Design System</div>
+                        <h3>Dark Neon Glassmorphism</h3>
+                        <p>A custom CSS design language tailored with black canvas, neon orange accents, backdrop-filter blurs, and interactive hovering animations.</p>
+                        <div class="project-tech">
+                            <span>CSS Variables</span>
+                            <span>Backdrop Filter</span>
+                            <span>Keyframe Animations</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#hero" class="project-link-btn">View Elements</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Showcase Section -->
+        <section class="section-wrapper" id="gallery">
+            <div class="section-header">
+                <span class="section-tag">Media</span>
+                <h2 class="section-title">Visual Gallery</h2>
+                <p class="section-desc">Click any image to view in full resolution lightbox.</p>
+            </div>
+
+            <div class="gallery-showcase">
+                <div class="gallery-item" title="Click to view full image">
+                    <img src="assets/img/1.jpg" alt="Gallery Photo 1">
+                    <div class="gallery-overlay">
+                        <span>Project Overview &bull; Image 1</span>
+                    </div>
+                </div>
+                <div class="gallery-item" title="Click to view full image">
+                    <img src="assets/img/2.jpg" alt="Gallery Photo 2">
+                    <div class="gallery-overlay">
+                        <span>Interface Concept &bull; Image 2</span>
+                    </div>
+                </div>
+                <div class="gallery-item" title="Click to view full image">
+                    <img src="assets/img/3.jpg" alt="Gallery Photo 3">
+                    <div class="gallery-overlay">
+                        <span>System Architecture &bull; Image 3</span>
+                    </div>
+                </div>
+                <div class="gallery-item" title="Click to view full image">
+                    <img src="assets/img/4.jpg" alt="Gallery Photo 4">
+                    <div class="gallery-overlay">
+                        <span>Design Showcase &bull; Image 4</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-wrapper" id="contact">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-desc">Have a question or want to collaborate? Send a message directly.</p>
+            </div>
+
+            <div class="contact-card">
+                <form id="portfolioContactForm">
+                    <div class="contact-form-grid">
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <input type="text" id="contactName" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" name="subject" placeholder="Project Inquiry / Feedback" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" placeholder="Write your message here..." required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary-glow" style="cursor: pointer;">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="port-footer">
+        <div class="footer-inner">
+            <p class="footer-text">&copy; <span id="currentYear">2026</span> Dev Lehm. Built with pure HTML, CSS, and JavaScript.</p>
+            <div class="footer-links">
+                <a href="#hero">Back to Top &uarr;</a>
+                <a href="student-portal.html">Student Portal</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="lightbox-modal" id="galleryLightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close image modal">&times;</button>
+            <img src="" id="lightboxImage" alt="Expanded Gallery View">
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="portal-toast" id="portalToast"></div>
+
+    <!-- Persistent Status Indicator (Bottom Left) -->
+    <div class="status-indicator" id="authStatus"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/db.js"></script>
+    <script src="assets/js/student-portal.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/auth.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in - Student Portal</title>
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <style>
+        .demo-box {
+            margin-top: 18px;
+            padding: 12px;
+            border-radius: 8px;
+            background: rgba(255, 106, 0, 0.08);
+            border: 1px dashed rgba(255, 106, 0, 0.35);
+            font-size: 12.5px;
+            color: #d1d5db;
+            text-align: center;
+        }
+        .demo-btn {
+            display: inline-block;
+            margin-top: 6px;
+            padding: 5px 12px;
+            border-radius: 6px;
+            background: #ff6a00;
+            color: #000;
+            font-weight: 700;
+            font-size: 12px;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<main class="auth">
+    <a href="index.html" class="brand">Student Portal &amp; Portfolio</a>
+    <h1>Welcome back</h1>
+    <p class="sub">Log in to manage student records.</p>
+
+    <!-- Error & Success Notices -->
+    <div class="msg error" id="loginError" style="display: none;"></div>
+    <div class="msg success" id="loginSuccess" style="display: none;"></div>
+
+    <form id="loginForm" data-auth-form>
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="maria@example.com"
+                   autocomplete="email" required autofocus>
+        </div>
+        <div class="field">
+            <label for="password">Password</label>
+            <div class="pw">
+                <input type="password" id="password" name="password" placeholder="Your password"
+                       autocomplete="current-password" required>
+                <button type="button" class="pw-toggle" aria-label="Show password">Show</button>
+            </div>
+        </div>
+        <button type="submit" class="submit">Log in</button>
+    </form>
+
+    <div class="demo-box">
+        <div><strong>Need quick access?</strong> Use the pre-configured demo account:</div>
+        <button type="button" class="demo-btn" id="fillDemoBtn">Auto-fill Demo Credentials</button>
+    </div>
+
+    <p class="link-text">New here? <a href="signup.html">Create an account</a></p>
+    <p class="link-text" style="margin-top: 6px;"><a href="index.html">&larr; Back to Portfolio</a></p>
+</main>
+
+<div class="status-indicator" id="authStatus"></div>
+
+<script src="assets/js/db.js"></script>
+<script src="assets/js/auth.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const successBox = document.getElementById("loginSuccess");
+        if (params.get("registered") === "1" && successBox) {
+            successBox.textContent = "Account created successfully! You can log in now.";
+            successBox.style.display = "block";
+        } else if (params.get("loggedout") === "1" && successBox) {
+            successBox.textContent = "You have been logged out.";
+            successBox.style.display = "block";
+        }
+
+        // Demo credentials auto-fill
+        const fillDemoBtn = document.getElementById("fillDemoBtn");
+        if (fillDemoBtn) {
+            fillDemoBtn.addEventListener("click", () => {
+                document.getElementById("email").value = "maria@example.com";
+                document.getElementById("password").value = "Password123!";
+            });
+        }
+    });
+</script>
+</body>
+</html>
+
